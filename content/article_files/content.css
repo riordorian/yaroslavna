@@ -1,0 +1,291 @@
+.content{
+	padding-top: 6px;
+	padding: 0px 15px;
+}
+.content .content__breadcrumbps{
+	color: #a7a19b;
+	padding-left: 0;
+	margin-bottom: 5px;
+}
+.content .content__breadcrumbps li{
+	display: inline-block;
+}
+.content .content__breadcrumbps li a{
+	font-size: 12px;
+	color: #a7a19b;
+	font-weight: 300;
+	font-style: italic;
+}
+.content .content__breadcrumbps li span{
+	color: #574e44;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 300;
+}
+.content .content__header{
+	background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQECAgICAgICAgICAgMDAwMDAwMDAwP/2wBDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAGAAEDAREAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABoQAAEFAQAAAAAAAAAAAAAAAAkACBhZmNb/xAAUAQEAAAAAAAAAAAAAAAAAAAAF/8QAGREAAgMBAAAAAAAAAAAAAAAAAAMTU5IC/9oADAMBAAIRAxEAPwBOpdN5qCFBv8XfNIWdVCNrFYWXNx2f/9k=);
+	background-repeat: repeat-x;
+	background-position: center;
+}
+.content .content__header span{
+	background: white;
+	font-family: 'Roboto Slab';
+	font-size: 24px;
+	color: #574e44;
+	text-transform: uppercase;
+	letter-spacing: 0.015em;
+	padding-right: 15px;
+}
+
+
+/*КАТАЛОГ*/
+/*Список категорий*/
+.content .categories{
+	padding-top: 42px;
+}
+.content .categories .col-md-4{
+	padding-left: 0;
+}
+.content .categories .col-md-4:last-of-type{
+	padding-right: 0;
+}
+
+.content .categories .categories__item a{
+	color: #574e44;
+}
+.content .categories .categories__item .image{
+	width: 100%;
+	height: 176px;
+	background-image: url(../img/catalog/church-shop.jpg);
+	background-position: center;
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+	transition: all 0.2s;
+}
+.content .categories .categories__item a:hover .image{
+	-webkit-background-size: auto 110%;
+	background-size: auto 110%;
+}
+.content .categories .categories__item .image--carving{
+	background-image: url('../img/catalog/carving.jpg');
+}
+.content .categories .categories__item .image--souvenirs{
+	background-image: url('../img/catalog/souvenirs.jpg');
+}
+.content .categories .categories__item .name{
+	font-family: 'Roboto Slab';
+	font-size: 18px;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+.content .categories .categories__item .description{
+	font-size: 14px;
+	text-align: justify;
+	font-weight: 300;
+	line-height: 1.3;
+	padding-top: 2px;
+}
+
+/*Категория*/
+.content .category{
+	text-align: center;
+	margin-bottom: -50px;
+	overflow: hidden;
+}
+.content .category .category__item{
+	text-align: center;
+	margin-bottom: 50px;
+	padding: 18px 0px 0px 0px;
+}
+.content .category .category__item a{
+	display: inline-block;
+	width: 190px;
+	box-sizing: content-box;
+	border: 2px solid rgba(0, 0, 0, 0);
+	padding: 0px 10px 10px 10px;
+}
+.content .category .category__item:nth-of-type(4n+1){
+	clear: both;
+}
+.content .category .category__item a:hover{
+	text-decoration: none;
+	border: 2px solid #a7a19b;
+}
+.content .category img{
+	margin-top: 10px;
+}
+.content .category .name{
+	max-width: 152px;
+	font-size: 16px;
+	color: #574e44;
+	line-height: 1.2;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 0 auto;
+	margin-top: 6px;
+}
+.content .category .size{
+	font-size: 12px;
+	color: #a7a19b;
+	font-weight: 300;
+	padding-top: 6px;
+	margin-bottom: 8px;
+}
+.content .category .price{
+	font-size: 16px;
+	color: #231b16;
+	text-align: left;
+	font-weight: 500;
+	padding: 0;
+}
+.content .category .action-btn{
+	padding: 0;
+}
+.content .pagination-wrapper{
+	text-align: center;
+	padding-top: 40px;
+}
+
+/*Карточка товара*/
+.content .product-card{
+	padding-top: 28px;
+	color: #574e44;
+}
+.content .product-card .product__img{
+	padding-left: 0;
+}
+.content .product-card .product__info{
+	padding-left: 8px;
+}
+.content .product-card .product__name{
+	max-width: 300px;
+	font-size: 20px;
+	line-height: 1.55;
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: -4px;
+}
+.content .product-card .product__properties{
+	font-size: 16px;
+	font-weight: 300;
+	padding-top: 17px;
+}
+.content .product-card .property__name{
+	font-weight: bold;
+	padding-right: 7px;
+}
+.content .product-card .price{
+	padding-top: 10px;
+}
+.content .product-card .price .property__text{
+	font-size: 30px;
+}
+.content .product-card .description{
+	text-align: justify;
+	font-size: 13px;
+}
+.content .product-card .product__order-form{
+
+	padding-right: 0;
+}
+.content .product-card form{
+	background: #f1ece8;
+	padding: 26px 30px;
+}
+.content .product-card form .form__action{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	margin: 0px 0px 28px 0px;
+}
+
+
+/*СТАТЬИ*/
+.content .article{
+	color: #574e44;
+	padding-top: 30px;
+	text-align: justify;
+}
+.content .article .article__img{
+	padding-left: 0;
+}
+.content .article p{
+	margin-top: -4px;
+}
+.content .article h3{
+	font-size: 18px;
+	padding-top: 0;
+	margin-bottom: 5px;
+}
+.content .article .article__fulltext{
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0px 0px 7px 0px;
+	line-height: 1.5;
+}
+.content .article .contacts__text{
+	font-size: 16px;
+	font-weight: 300;
+}
+.content .article .contacts__text p{
+	margin-bottom: 12px;
+}
+.content .article__socials .socials__item{
+	display: inline-block;
+	width: 22px;
+	height: 23px;
+	background: url(data:image/png;base64,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);
+	margin-right: 6px;
+}
+.content .article__socials .socials__item:last-of-type{
+	margin-right: 0;
+}
+.content .article__socials .socials__item:hover{
+	background-position: 0 23px;	
+}
+.content .article__socials .socials__item--vk{
+	background-position: -23px 0px;
+}
+.content .article__socials .socials__item--vk:hover{
+	background-position: -23px 23px;
+}
+.content .article__socials .socials__item--instagram{
+	background-position: -46px 0px;
+}
+.content .article__socials .socials__item--instagram:hover{
+	background-position: -46px 23px;
+}
+.content .article__socials .socials__item--ok{
+	background-position: -69px 0px;
+}
+.content .article__socials .socials__item--ok:hover{
+	background-position: -69px 23px;
+}
+
+.content form.loginLoginForm{
+	background: #f1ece8;
+	padding: 26px 30px;
+}
+.content form.loginLoginForm .loginLegend, #registration-form .form__action{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	margin: 0px 0px 28px 0px;
+}
+.content form.loginLoginForm label, .content form.loginLoginForm input{
+	display: block;						
+}
+.loginLoginForm p{
+	text-align: center;
+}
+#registration-form, #res-text{
+	background: #f1ece8;
+	padding: 26px 30px;
+}
+#res-text{
+	font-size: 39px;
+	line-height: 1.4;
+	text-align: center;
+}

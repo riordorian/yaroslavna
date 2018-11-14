@@ -1,0 +1,196 @@
+@media screen and (max-width: 767px) {
+	.header .header__logo{
+		margin-left: 15px;
+	}
+	.header .navbar-toggle{
+		margin-right: 15px;
+	}
+	.navbar-collapse.in .row .navbar-collapse.in{
+		right: 0;
+	}
+
+	.footer .footer__contacts{
+		padding-right: 15px;
+	}
+	.footer .footer__socials{
+		padding-left: 15px;
+	}
+	.slider-wrapper #slider li .slide__name{
+		font-size: 30px;
+	}
+	.slider-wrapper #slider li .slide__text{
+		font-size: 25px;
+		max-width: 80%;
+		margin: 0 auto;
+	}
+	.slider-wrapper .prev{
+		margin-left: 20px;
+	}
+	.slider-wrapper .next{
+		margin-right: 15px;
+	}
+	.content .content__header{
+		background: white;
+		position: relative;
+		z-index: 1;
+	}
+	.content .categories .col-md-4{
+		padding-right: 0px;
+		margin-bottom: 50px;
+	}
+	.content .product-card .product__img img{
+		margin: 0 auto;
+	}
+	.content .product-card .product__info{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.content .product-card .product__properties div{
+		text-align: justify;
+	}
+	.content .product-card .product__properties div p{
+		vertical-align: top;
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	.content .product-card .product__name{
+		max-width: none;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.content .product-card .price{
+		padding-top: 0;
+	}
+	.content .product-card .price .property__text{
+		line-height: 0;
+	}
+	.content .product-card .product__order-form{
+		padding-left: 0;
+		margin-top: 30px;
+	}
+	.content .article .article__img{
+		margin-bottom: 30px;
+		padding-right: 0;
+	}
+	.content .article .article__img img{
+		margin: 0 auto;
+	}
+	.content .article .article__text{
+		padding: 0;
+	}
+}
+@media screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2){
+	.rub:before{
+		font-family: Arial;
+	}
+	.footer .col-md-6{
+		display: none;
+	}
+	.footer .footer__socials{
+		display: none;
+	}
+	.footer .footer__contacts{
+		float: none;
+		width: 100%;
+		padding: 0 15px;
+	}
+	.footer .footer__phone{
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 16px;
+		line-height: 30px;
+		margin: 0;
+	}
+	.footer .footer__contacts .btn{
+		display: inline-block;
+		vertical-align: middle;
+		float: right;
+	}
+	.footer .footer__contacts .btn:after{
+		content: '';
+		clear: both;
+	}
+
+}
+@media screen and (max-width: 520px) {
+	.slider-wrapper #slider li .slide__name{
+		font-size: 27px !important;
+	}
+	.slider-wrapper #slider li .slide__text{
+		font-size: 15px !important;
+	}
+	.content .category .category__item{
+		display: block;
+		width: 100%;
+	}
+	.content .product-card .product__properties div p{
+		display: block;
+		margin-bottom: 15px;
+		line-height: 1.2;
+	}
+	.form__field{
+		line-height: 40px;
+	}
+	.article .work-time b{
+		display: none;
+	}
+	.article .work-time b:first-of-type{
+		display: block;
+	}
+
+}
+@media (min-width: 520px) and (max-width: 767px){
+	.content .category .category__item:nth-of-type(2n+1){
+		clear: both;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.header .container{
+		padding: 0;
+	}
+	.content .category .category__item:nth-of-type(4n+1){
+		clear: none;
+	}
+	.content .category .category__item:nth-of-type(3n+1){
+		clear: both;
+	}
+	.content .product-card .product__img img{
+		margin: 0 auto;
+	}
+	.content .product-card .product__info{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.content .product-card .product__properties div{
+		text-align: justify;
+	}
+	.content .product-card .product__properties div p{
+		vertical-align: top;
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	.content .product-card .product__name{
+		max-width: none;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.content .product-card .price{
+		padding-top: 0;
+	}
+	.content .product-card .price .property__text{
+		line-height: 0;
+	}
+	.content .product-card .product__order-form{
+		padding-left: 0;
+		margin-top: 30px;
+	}
+	.content .article .article__img{
+		margin-bottom: 30px;
+	}
+	.content .article .article__img img{
+		margin: 0 auto;
+	}
+	.content .article .article__text{
+		padding: 0;
+	}
+}

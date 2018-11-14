@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+                    <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+                    <loc>http://ikona-yaroslavna.ru/</loc>
+                    <lastmod>2015-04-20T12:52:05+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery</loc>
+                    <lastmod>2015-04-20T15:58:55+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/articles</loc>
+                    <lastmod>2014-11-30T15:47:15+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/404-error</loc>
+                    <lastmod>2014-11-30T18:19:23+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/contacts</loc>
+                    <lastmod>2015-04-21T10:56:55+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/order</loc>
+                    <lastmod>2014-11-21T16:58:13+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/ikonostas</loc>
+                    <lastmod>2015-04-20T15:58:33+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/obraz-spasitelya</loc>
+                    <lastmod>2015-04-20T15:58:12+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/obraz-bogorodicy</loc>
+                    <lastmod>2015-04-20T15:58:03+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/angel-hranitel</loc>
+                    <lastmod>2015-04-20T15:57:52+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/imennaya</loc>
+                    <lastmod>2015-04-20T15:57:40+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/galery/semeiniya</loc>
+                    <lastmod>2015-04-20T15:57:10+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/articles/semeinaya-ikona</loc>
+                    <lastmod>2014-11-30T17:22:12+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/articles/spasitel</loc>
+                    <lastmod>2014-11-30T17:33:12+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/articles/ikona-bogorodicy</loc>
+                    <lastmod>2014-11-30T17:22:29+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+<url>
+                    <loc>http://ikona-yaroslavna.ru/articles/mernaya-ikona</loc>
+                    <lastmod>2014-11-30T17:22:37+03:00</lastmod>
+                    <priority>1.0</priority>
+                </url>
+</urlset>

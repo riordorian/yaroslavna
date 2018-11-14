@@ -1,0 +1,24 @@
+/*ШАПКА РЕГУЛЯРНЫХ СТРАНИЦ*/
+.header{
+	width: 100%;
+	z-index: 2;
+}
+.header .menu{
+	padding-top: 12px;
+	display: inline-block;
+}
+.header .navbar-toggle--open .icon-bar{
+	display: none;
+}
+.header .menu .menu__btn{
+	display: inline-block;
+	height: 32px;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 32px;
+	color: #574e44;
+	padding: 0px 20px;
+}
+.header .menu .menu__btn:hover{
+	border: 1px solid #574e44;
+}

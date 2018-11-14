@@ -1,0 +1,331 @@
+.content .content__breadcrumbps{
+	color: #a7a19b;
+	padding-left: 0;
+	margin-bottom: 5px;
+}
+.content .content__breadcrumbps li{
+	display: inline-block;
+}
+.content .content__breadcrumbps li a{
+	font-size: 12px;
+	color: #a7a19b;
+	font-weight: 300;
+	font-style: italic;
+}
+.content .content__breadcrumbps li span{
+	color: #a7a19b;
+	font-size: 12px;
+	font-weight: 300;
+}
+.content .content__breadcrumbps li span.separator{
+	font-style: italic;
+	padding-right: 2px;
+}
+
+.content .content__header{
+	margin-top: 0;
+}
+.content .content__header span{
+	background: white;
+	font-family:  'Fira Sans Extra Condensed', sans-serif;
+	font-size: 32px;
+	color: #224039;
+	text-transform: uppercase;
+	letter-spacing: 0.015em;
+}
+
+
+/*КАТАЛОГ*/
+/*Список категорий*/
+.content .categories{
+	padding-top: 25px;
+}
+.content .categories .col-md-4:nth-of-type(3n+1){
+	clear: both;
+}
+.content .categories .col-md-3:nth-of-type(4n+1){
+	clear: both;
+}
+.content .categories .categories__item{
+	margin-bottom: 30px;
+}
+.content .categories .categories__item a{
+	color: #574e44;
+}
+.content .categories .categories__item .image{
+	width: 100%;
+	height: 230px;
+	background-image: url(../img/catalog/church-shop.jpg);
+	background-position: center;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	transition: all .5s linear;
+}
+.content .categories .categories__item a:hover .image{
+	-webkit-background-size: 110% auto;
+}
+.content .categories.workshop .categories__item .image{
+	-webkit-background-size: auto 100%;
+	background-size: auto 100%;
+}
+.content .categories.workshop .categories__item a:hover .image{
+	-webkit-background-size: auto 110%;
+}
+.content .categories .categories__item .image--carving{
+	background-image: url('../img/catalog/carving.jpg');
+}
+.content .categories .categories__item .image--souvenirs{
+	background-image: url('../img/catalog/souvenirs.jpg');
+}
+.content .categories .categories__item .name{
+	font-family:  'Fira Sans Extra Condensed', sans-serif;
+	font-size: 22px;
+	text-transform: uppercase;
+	padding-top: 10px;
+	margin-bottom: 0;
+}
+.content .categories .categories__item .description{
+	font-size: 14px;
+	text-align: justify;
+	font-weight: 300;
+	line-height: 1.3;
+	padding-top: 2px;
+}
+
+/*Категория*/
+.content .category{
+	text-align: center;
+	margin-bottom: -50px;
+	overflow: hidden;
+}
+.content .category .category__item{
+	text-align: left;
+	margin-bottom: 50px;
+}
+.content .category .category__item a{
+	display: inline-block;
+	width: 170px;
+	box-sizing: content-box;
+}
+.content .category .category__item:nth-of-type(4n+1){
+	clear: both;
+}
+.content .category .category__item a:hover{
+	text-decoration: none;
+}
+.content .category img{
+	margin-top: 10px;
+}
+.content .category + .category__results-info{
+	margin-top: 20px;
+}
+.content .category .name{
+	font-size: 13px;
+	color: #224039;
+	text-align: left;
+	line-height: 1.2;
+	font-weight: 500;
+	text-transform: uppercase;
+	margin: 10px auto 0;
+}
+.content .category .size{
+	font-size: 12px;
+	color: #a7a19b;
+	font-weight: 300;
+	text-align: left;
+	padding-top: 6px;
+	margin-bottom: 8px;
+}
+.content .category .price{
+	font-size: 16px;
+	color: #231b16;
+	text-align: left;
+	font-weight: 500;
+	padding: 0;
+}
+.content .category .action-btn{
+	padding: 0;
+}
+.content .pagination-wrapper{
+	text-align: center;
+	padding-top: 40px;
+}
+
+/*Карточка товара*/
+.content .product-card{
+	padding-top: 28px;
+	color: #574e44;
+}
+.content .product-card .product__img{
+	padding-left: 0;
+}
+.content .product-card .product__img a{
+	outline: none;
+}
+.content .product-card .product__info{
+	padding-left: 8px;
+}
+.content .product-card .product__name{
+	max-width: 300px;
+	font-size: 20px;
+	line-height: 1.55;
+	text-transform: uppercase;
+	margin: 0;
+	margin-top: -4px;
+}
+.content .product-card .product__properties{
+	font-size: 16px;
+	font-weight: 300;
+	margin-top: -3px;
+}
+.content .product-card .property__name{
+	font-weight: bold;
+	padding-right: 7px;
+}
+.content .product-card .price{
+	padding-top: 10px;
+}
+.content .product-card .price .property__text{
+	font-size: 30px;
+}
+.content .product-card .description{
+	text-align: justify;
+	font-size: 13px;
+}
+.content .product-card .product__order-form{
+
+	padding-right: 0;
+}
+.content .product-card form{
+	background: #224039;
+	padding: 26px 30px;
+}
+.content .product-card form .form__action{
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	margin: 0px 0px 28px 0px;
+}
+
+
+/*СТАТЬИ*/
+.content .article{
+	color: #574e44;
+	padding-top: 30px;
+	text-align: justify;
+}
+.content .article .article__img{
+	padding-left: 0;
+}
+.content .article p{
+	margin-top: -4px;
+}
+.content .article h3{
+	font-size: 18px;
+	padding-top: 0;
+	margin-bottom: 5px;
+}
+.content .article .article__fulltext{
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0px 0px 7px 0px;
+	line-height: 1.5;
+}
+.content .article .contacts__text{
+	font-size: 16px;
+	font-weight: 300;
+}
+.content .article .contacts__text p{
+	margin-bottom: 12px;
+}
+.content .article__socials .socials__item{
+	display: inline-block;
+	margin-right: 6px;
+}
+.content .article__socials .socials__item:last-of-type{
+	margin-right: 0;
+}
+.content .article__socials .socials__item svg{
+	width: 25px;
+	height: 25px;
+	fill: #574e44;
+}
+.content .article__socials .socials__item svg:hover{
+	fill: #a7a19b;
+}
+
+.popup-form{
+	background: #f1ece8;
+	padding: 26px 30px;
+}
+.content form.loginLoginForm .loginLegend, #registration-form .form__action{
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	margin: 0px 0px 28px 0px;
+}
+.content form.loginLoginForm label, .content form.loginLoginForm input{
+	display: block;						
+}
+.loginLoginForm p{
+	text-align: center;
+}
+#registration-form, #res-text, #res-text_order{
+	background: #f1ece8;
+	padding: 26px 30px;
+}
+#res-text, #res-text_order{
+	font-size: 34px;
+	line-height: 1.1;
+	text-align: center;
+}
+#res-text span, #res-text_order span{
+	font-size: 17px;
+}
+
+
+.text-style-title,
+.text-style-subtitle p{
+	background: rgba(0,0,0,.4);
+}
+.text-style-title {
+	margin: 0;
+	font-size: 60px;
+	line-height: 1.2;
+	font-weight: 600;
+	text-shadow: none !important;
+	text-align: center;
+	color: white;
+}
+.text-style-title p{
+	margin-bottom: 0;
+}
+.text-style-subtitle {
+	margin: 0;
+	font-size: 26px;
+	line-height: 1.2;
+	font-weight: 400;
+	text-align: center;
+	color: white;
+}
+.text-style-subtitle p{
+	display: inline-block;
+	padding: 20px;
+}
+.main__offer{
+	background: url(../images/bg_venchalnie.jpg);
+	background-size: cover;
+	background-position: center 40%;
+	margin-top: -42px;
+	padding: 85px 0 90px;
+}
+.main__about{
+	margin-top: 35px;
+}
+.main__about p{
+	font-size: 17px;
+	font-weight: 300;
+}

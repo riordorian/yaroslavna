@@ -1,0 +1,79 @@
+/*ПОДВАЛ*/
+.footer{
+	background: #231b16;
+	padding-top: 30px;
+	color: #574e44;
+	padding-bottom: 28px;
+}
+.footer .col-md-2{
+	padding: 0;
+}
+.footer .footer__socials .socials__item{
+	display: inline-block;
+	width: 22px;
+	height: 23px;
+	background: url(data:image/png;base64,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);
+	margin-right: 6px;
+}
+.footer .footer__socials .socials__item:last-of-type{
+	margin-right: 0;
+}
+.footer .footer__socials .socials__item:hover{
+	background-position: 0 23px;	
+}
+.footer .footer__socials .socials__item--vk{
+	background-position: -23px 0px;
+}
+.footer .footer__socials .socials__item--vk:hover{
+	background-position: -23px 23px;
+}
+.footer .footer__socials .socials__item--instagram{
+	background-position: -46px 0px;
+}
+.footer .footer__socials .socials__item--instagram:hover{
+	background-position: -46px 23px;
+}
+.footer .footer__socials .socials__item--ok{
+	background-position: -69px 0px;
+}
+.footer .footer__socials .socials__item--ok:hover{
+	background-position: -69px 23px;
+}
+.footer .company-name{
+	font-size: 12px;
+	font-weight: 300;
+	padding-top: 7px;
+}
+.footer .footer__nav {
+  padding-top: 11px;
+}
+.footer .footer__nav li{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 36px;
+	list-style-type: none;
+}
+.footer .footer__nav li:last-of-type{
+	margin-right: 0;
+}
+.footer .footer__nav li a{
+	font-size: 13px;
+	font-weight: 300;
+	color: #574e44;
+	text-transform: uppercase;
+}
+.footer .footer__nav li a:hover{
+	color: #a7a19b;
+}
+.footer .footer__contacts{
+	padding-right: 0;
+}
+.footer .footer__phone{
+	font-size: 18px;
+	font-weight: 300;
+	text-align: right;
+	line-height: 1;
+}
+.footer .footer__contacts .btn{
+	float: right;
+}

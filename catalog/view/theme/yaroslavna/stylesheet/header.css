@@ -1,0 +1,76 @@
+/*ШАПКА РЕГУЛЯРНЫХ СТРАНИЦ*/
+.header{
+	width: 100%;
+	z-index: 2;
+}
+.header .descriptor{
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-top: 49px;
+}
+.header .header__logo img{
+	display: block;
+	max-width: 80%;
+	margin: 12px auto 0;
+}
+.header .header-top__phone{
+	display: inline-block;
+	font-size: 29px;
+	color: #224039;
+	font-weight: 300;
+	margin-top: 15px;
+}
+.header .header-top__txt{
+	line-height: 1;
+	margin: 3px 0 11px;
+}
+.header .header-top__btn{
+	height: 30px;
+	line-height: 30px;
+	padding: 0 11px;
+	border-radius: 15px;
+}
+.navbar{
+	background: #224039;
+	line-height: 50px;
+	margin: 30px 0 40px;
+	border-radius: 0;
+}
+.header .navbar-toggle--open .icon-bar{
+	display: none;
+}
+.header .menu .menu__btn{
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 300;
+	white-space: nowrap;
+	text-transform: uppercase;
+	color: white;
+	text-align: left;
+	margin-right: 45px;
+}
+.header .menu .menu__btn:hover{
+	text-decoration: underline;
+}
+@media(max-width: 991px){
+	.navbar{
+		background-color: transparent;
+		margin: 0 0 35px;
+		line-height: 1.4;
+	}
+	.navbar-collapse.in{
+		background: white;
+		float: right;
+		padding: 20px;
+		border: 2px solid #224039;
+		z-index: 98;
+	}
+	.header .menu .menu__btn{
+		display: block;
+		font-size: 22px;
+	}
+	.header .header__logo img{
+		margin: 0 auto 10px 0;
+	}
+}

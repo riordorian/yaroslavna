@@ -1,0 +1,8 @@
+User-Agent: *
+Disallow: /core/
+Disallow: /connectors/
+Disallow: /manager/
+Disallow: /config.core.php
+Disallow: /sitemap.php
+
+Sitemap: http://ikona-yaroslavna.ru/sitemap.xml

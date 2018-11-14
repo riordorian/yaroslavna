@@ -1,0 +1,77 @@
+/*ПОДВАЛ*/
+.footer{
+	background: #224039;
+	padding-top: 30px;
+	color: #e4e4e4;
+	padding-bottom: 28px;
+}
+.footer .col-md-2{
+	padding: 0;
+}
+.footer .footer__socials .socials__item{
+	display: inline-block;
+	width: 22px;
+	height: 23px;
+	margin-right: 6px;
+}
+.footer .footer__socials svg{
+	display: block;
+	width: 25px;
+	height: 25px;
+	fill: #e4e4e4;
+}
+.footer .footer__socials .socials__item:last-of-type{
+	margin-right: 0;
+}
+.footer .footer__socials svg:hover{
+	fill: #a7a19b;
+}
+.footer .company-name,
+.footer .company-name a{
+	font-size: 12px;
+	font-weight: 300;
+	color: white;
+	padding-top: 7px;
+}
+.footer .footer__nav {
+  padding: 11px 0 0;
+}
+.footer .footer__nav li{
+	display: inline-block;
+	vertical-align: top;
+	list-style-type: none;
+}
+.footer .footer__nav li:last-of-type{
+	margin-right: 0;
+}
+.footer .footer__nav li a{
+	display: inline-block;
+	font-size: 13px;
+	font-weight: 300;
+	color: #e4e4e4;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.footer .footer__nav li a:hover{
+	color: #a7a19b;
+}
+.footer .footer__contacts{
+	padding-right: 0;
+}
+.footer .footer__phone{
+	font-size: 18px;
+	font-weight: 300;
+	text-align: right;
+	line-height: 1;
+}
+.footer .footer__phone a{
+	font-size: 22px;
+	color: #e4e4e4;
+}
+.footer .footer__phone a:hover{
+	text-decoration: none;
+	color: #a7a19b;
+}
+.footer .footer__contacts .btn{
+	float: right;
+}
