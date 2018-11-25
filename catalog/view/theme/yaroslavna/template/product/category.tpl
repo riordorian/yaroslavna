@@ -39,7 +39,7 @@ if( !empty($products) ){
             <span class="rub"></span>
           </div>
           <div class="col-md-6 col-sm-6 col-xs-6 action-btn">
-            <span href="<?=$arProduct['HREF']?>" class="btn btn--buy">Заказать</span>
+            <span href="<?=$arProduct['HREF']?>" class="btn btn--buy">Подробнее</span>
           </div>
         </a>
       </div><?

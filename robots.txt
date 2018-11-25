@@ -23,6 +23,8 @@ Disallow: /*?filter_description=
 Disallow: /*&filter_description=
 Disallow: /*?tracking=
 Disallow: /*&tracking=
+Sitemap: http://ikona-yaroslavna.ru/index.php?route=extension/feed/google_sitemap
+Host: ikona-yaroslavna.ru
 
 User-agent: Yandex
 Disallow: /*route=account/
@@ -48,3 +50,4 @@ Disallow: /*&filter_sub_category=
 Disallow: /*?filter_description=
 Disallow: /*&filter_description=
 Clean-param: tracking
+Sitemap: http://ikona-yaroslavna.ru/index.php?route=extension/feed/yandex_sitemap

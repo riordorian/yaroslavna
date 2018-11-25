@@ -2,6 +2,9 @@
 	.main__offer{
 		background-position: center center;
 	}
+	.slick-slide.main__offer{
+		min-height: auto;
+	}
 }
 @media screen and (max-width: 767px) {
 	.header .header__logo{
@@ -14,10 +17,10 @@
 		padding: 50px 0 55px;
 	}
 	.text-style-title{
-		font-size: 19px;
+		font-size: 30px;
 	}
 	.text-style-subtitle{
-		font-size: 12px;
+		font-size: 22px;
 	}
 	.btn--offer:focus,
 	.btn--offer:active,
@@ -142,6 +145,7 @@
 	.content .category .category__item{
 		display: block;
 		width: 100%;
+		text-align: center;
 	}
 	.content .product-card .product__properties div p{
 		display: block;

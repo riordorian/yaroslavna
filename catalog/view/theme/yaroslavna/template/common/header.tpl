@@ -37,12 +37,15 @@
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/content.css?<?=time()?>">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/footer.css">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/mobile.css">
+    <link rel="stylesheet" href="catalog/view/theme/yaroslavna/js/slick/slick.css">
+    <link rel="stylesheet" href="catalog/view/theme/yaroslavna/js/slick/slick-theme.css">
     <link rel="stylesheet" href="catalog/view/javascript/jquery/magnific/magnific-popup.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300,400,500,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
     <!--СТИЛИ КОНЕЦ-->
 
     <!--JS-->
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/svg.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/slick/slick.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/main.js?<?=time()?>"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/send.js?<?=time()?>"></script>

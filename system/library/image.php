@@ -120,7 +120,7 @@ class Image {
 		imagedestroy($image_old);
 
 		$this->width = $width;
-		$this->height = $height;
+		$this->height = $new_height;
 	}
 
 	public function watermark($watermark, $position = 'bottomright') {
@@ -158,8 +158,8 @@ class Image {
 				$watermark_pos_y = $this->height - $watermark->getHeight();
 				break;
 			case 'bottomright':
-				$watermark_pos_x = $this->width - $watermark->getWidth();
-				$watermark_pos_y = $this->height - $watermark->getHeight();
+				$watermark_pos_x = $this->width - $watermark->getWidth() - 5;
+				$watermark_pos_y = $this->height - $watermark->getHeight() - 5;
 				break;
 		}
 		

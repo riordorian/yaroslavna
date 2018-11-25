@@ -97,13 +97,13 @@ class ControllerProductCategory extends Controller {
 
 		if ($category_info) {
 
-			if ($category_info['meta_title']) {
+			/*if ($category_info['meta_title']) {
 				$this->document->setTitle($category_info['meta_title']);
-			} else {
-				$this->document->setTitle($category_info['name']);
-			}
+			} else {*/
+				$this->document->setTitle(str_replace('#NAME#', $category_info['name'], $this->language->get('text_product_title')));
+//			}
 
-			$this->document->setDescription($category_info['meta_description']);
+			$this->document->setDescription(str_replace('#DESCRIPTION#', $category_info['meta_description'], $this->language->get('text_product_description')));
 			$this->document->setKeywords($category_info['meta_keyword']);
 
 			if ($category_info['meta_h1']) {

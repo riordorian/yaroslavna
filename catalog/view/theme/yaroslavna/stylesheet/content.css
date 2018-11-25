@@ -292,12 +292,14 @@
 	background: rgba(0,0,0,.4);
 }
 .text-style-title {
+	display: inline-block;
 	margin: 0;
 	font-size: 60px;
 	line-height: 1.2;
 	font-weight: 600;
 	text-shadow: none !important;
-	text-align: center;
+	/*text-align: center;*/
+	padding: 20px 20px 0 20px;
 	color: white;
 }
 .text-style-title p{
@@ -308,19 +310,27 @@
 	font-size: 26px;
 	line-height: 1.2;
 	font-weight: 400;
-	text-align: center;
+	/*text-align: center;*/
 	color: white;
 }
 .text-style-subtitle p{
 	display: inline-block;
 	padding: 20px;
 }
+.main__slider-wrap {
+	display: block;
+	position: relative;
+	width: 100%;
+	top: -42px;
+}
 .main__offer{
-	background: url(../images/bg_venchalnie.jpg);
+	background: url(../images/banner.jpg);
 	background-size: cover;
-	background-position: center 40%;
-	margin-top: -42px;
+	background-position: center center;
 	padding: 85px 0 90px;
+}
+.slick-slide.main__offer{
+	min-height: 600px;
 }
 .main__about{
 	margin-top: 35px;

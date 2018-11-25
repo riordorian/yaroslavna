@@ -222,13 +222,13 @@ class ControllerProductProduct extends Controller {
 				'href' => $this->url->link('product/product', $url . '&product_id=' . $this->request->get['product_id'])
 			);
 
-			if ($product_info['meta_title']) {
-				$this->document->setTitle($product_info['meta_title']);
-			} else {
-				$this->document->setTitle($product_info['name']);
-			}
+//			if ($product_info['meta_title']) {
+//				$this->document->setTitle($product_info['meta_title']);
+//			} else {
+			$this->document->setTitle(str_replace('#NAME#', $product_info['name'], $this->language->get('text_product_title')));
+//			}
 
-			$this->document->setDescription($product_info['meta_description']);
+			$this->document->setDescription(str_replace('#DESCRIPTION#', $product_info['name'], $this->language->get('text_product_description')));
 			$this->document->setKeywords($product_info['meta_keyword']);
 			$this->document->addLink($this->url->link('product/product', 'product_id=' . $this->request->get['product_id']), 'canonical');
 			$this->document->addScript('catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js');
@@ -320,10 +320,13 @@ class ControllerProductProduct extends Controller {
 			$results = $this->model_catalog_product->getProductImages($this->request->get['product_id']);
 
 			foreach ($results as $result) {
+				$popup = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height'));
+				$thumb = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_additional_width'), $this->config->get($this->config->get('config_theme') . '_image_additional_height'));
+
 				$data['images'][] = array(
 //					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height')),
-					'popup' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_popup_width'), $this->config->get($this->config->get('config_theme') . '_image_popup_height')),
-					'thumb' => $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_additional_width'), $this->config->get($this->config->get('config_theme') . '_image_additional_height'))
+					'popup' => $popup,
+					'thumb' => $thumb
 				);
 			}
 

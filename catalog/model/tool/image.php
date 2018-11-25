@@ -35,16 +35,22 @@ class ModelToolImage extends Model {
 				}
 			}
 
-			if ($width_orig != $width || $height_orig != $height) {
-				$image = new Image(DIR_IMAGE . $image_old);
-				if ($width >= 300 || $height >= 300) {
-					$image->watermark(new Image(DIR_IMAGE . 'watermark_white.png'), 'middlecenter');
-				}
-				$image->resize($width, $height);
-				$image->save(DIR_IMAGE . $image_new);
-			} else {
-				copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);
+//			if ($width_orig != $width || $height_orig != $height) {
+			$image = new Image(DIR_IMAGE . $image_old);
+			$image->resize($width, $height);
+//			$watermarkPos = ($width / $height) < 0.8 ? 'bottomcenter' : 'bottomright';
+			$watermarkPos ='bottomcenter';
+			if( $width <= 300 ){
+				$image->watermark(new Image(DIR_IMAGE . 'watermark_white_small.png'), $watermarkPos);
 			}
+			else{
+				$image->watermark(new Image(DIR_IMAGE . 'watermark_white.png'), $watermarkPos);
+			}
+			$image->save(DIR_IMAGE . $image_new);
+
+			/*} else {
+				copy(DIR_IMAGE . $image_old, DIR_IMAGE . $image_new);
+			}*/
 		}
 
 		$imagepath_parts = explode('/', $image_new);
