@@ -108,6 +108,9 @@
                                 <a class="menu__btn" href="/products/">
                                     Каталог
                                 </a>
+                                <a class="menu__btn" href="/ikonostasi/">
+                                    Иконостасы
+                                </a>
                                 <a class="menu__btn" href="/about/">
                                     О компании
                                 </a>

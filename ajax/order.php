@@ -3,10 +3,13 @@ $project_name = "Икона Ярославна";
 $admin_email = "info@ikona-yaroslavna.ru";
 $form_subject = "Заявка c сайта";
 $c = true;
-$arAvailableKeys = array('NAME', 'PHONE', 'FORM', 'PRICE', 'SIZE');
+$arAvailableKeys = array('NAME', 'PHONE', 'FORM', 'PRICE', 'SIZE', 'PRODUCT');
 
 foreach ($_REQUEST as $key => $value) {
 	if ($value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" && in_array($key, $arAvailableKeys)) {
+		if( $key == 'PRODUCT' ){
+			$value = '<a href="' . $_SERVER['HTTP_HOST'] . $value . '">Икона</a>';
+		}
 		$message .= "
 		" . (($c = !$c) ? '<tr>' : '<tr style="background-color: #f8f8f8;">') . "
 		<td style='padding: 10px; border: #e9e9e9 1px solid;'><b>$key</b></td>

@@ -60,6 +60,10 @@
 		padding-right: 0px;
 		margin-bottom: 50px;
 	}
+	.content .categories .categories__item--high .image{
+		height: 550px;
+	}
+
 	.content .product-card .product__img img{
 		margin: 0 auto;
 	}

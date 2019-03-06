@@ -56,15 +56,17 @@
         }
         if( !$bHasSize ){
             ?><p><span class="property__name">Размер:</span>
-            <span class="property__text"><?=$width?>x<?=$height?> см</p><?
+            <span class="property__text"><?=$width?>x<?=$height?> см</p>
+            <input type="hidden" name="size" value="<?=$width?>x<?=$height?>"><?
         }
-
-        ?><p class="price">
-          <span class="property__name">Цена:</span>
-          <span class="property__text"><span class="js-price-val"><?=$price?></span>&thinsp;<span class="rub"></span></span>
-        </p>
-        <p class="helper"></p>
-      </div><?
+        if( $price ){
+            ?><p class="price">
+              <span class="property__name">Цена:</span>
+              <span class="property__text"><span class="js-price-val"><?=$price?></span>&thinsp;<span class="rub"></span></span>
+            </p>
+            <p class="helper"></p><?
+        }
+      ?></div><?
 
       if( !empty($description) ){
         ?><p>
@@ -89,6 +91,7 @@
     <form class="js-form" action="/ajax/order.php">
       <p class="form__action">Заказать икону</p>
       <input type="hidden" value="order" name="FORM">
+      <input type="hidden" value="<?=$_SERVER['REQUEST_URI']?>" name="PRODUCT">
       <input type="hidden" value="<?=$heading_title . ' (' . $model . ')'?>" name="item-name">
       <input type="hidden" value="<?=$price?>" name="PRICE" class="js-price">
       <input type="hidden" value="<?=$size?>" name="SIZE" class="js-size">

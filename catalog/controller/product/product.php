@@ -165,6 +165,11 @@ class ControllerProductProduct extends Controller {
 		$this->load->model('catalog/product');
 
 		$product_info = $this->model_catalog_product->getProduct($product_id);
+		$category_info = $this->model_catalog_product->getCategories($product_id);
+		$category_info = end($category_info);
+		$category_id = $category_info['category_id'];
+		$ob_category = $this->db->query(" SELECT * FROM ".DB_PREFIX."url_alias WHERE `query`='category_id=$category_id' ");
+		$category_info['keyword'] = $ob_category->row['keyword'];
 
 		if ($product_info) {
 			$url = '';
@@ -330,7 +335,11 @@ class ControllerProductProduct extends Controller {
 				);
 			}
 
-			if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+
+			if( $category_info['keyword'] == 'ikonostasy' ){
+				$data['price'] = false;
+			}
+			elseif ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 			} else {
 				$data['price'] = false;
@@ -392,6 +401,10 @@ class ControllerProductProduct extends Controller {
 				}
 			}
 
+			if( empty($data['size']) ){
+			    $data['size'] = implode(' x ', [$data['width'], $data['height']]);
+			}
+			
 			if ($product_info['minimum']) {
 				$data['minimum'] = $product_info['minimum'];
 			} else {
@@ -437,7 +450,10 @@ class ControllerProductProduct extends Controller {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_related_width'), $this->config->get($this->config->get('config_theme') . '_image_related_height'));
 				}
 
-				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+				if( $category_info['keyword'] == 'ikonostasy' ){
+					$price = false;
+				}
+				elseif ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 				} else {
 					$price = false;
@@ -460,6 +476,7 @@ class ControllerProductProduct extends Controller {
 				} else {
 					$rating = false;
 				}
+				
 
 				$data['products'][] = array(
 					'product_id'  => $result['product_id'],

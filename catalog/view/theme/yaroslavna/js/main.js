@@ -26,14 +26,16 @@ $(function()
 		$(this).magnificPopup(defaults);
 	});
 
-    $('.js-slick').slick({
-        infinite: true,
-        dots: true,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        slide: '.main__offer'
-	});
+	if( $('.js-slick').length && $.fn.slick != undefined ){
+        $('.js-slick').slick({
+            infinite: true,
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slide: '.main__offer'
+        });
+	}
 });
 
 /**

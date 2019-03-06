@@ -95,6 +95,9 @@ class ControllerProductCategory extends Controller {
 
 		$category_info = $this->model_catalog_category->getCategory($category_id);
 
+		$ob_category = $this->db->query(" SELECT * FROM ".DB_PREFIX."url_alias WHERE `query`='category_id=$category_id' ");
+		$category_info['keyword'] = $ob_category->row['keyword'];
+
 		if ($category_info) {
 
 			/*if ($category_info['meta_title']) {
@@ -204,9 +207,13 @@ class ControllerProductCategory extends Controller {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
 
-				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
+				if( $category_info['keyword'] == 'ikonostasy' ){
+					$price = false;
+				}
+				elseif ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
-				} else {
+				}
+				else {
 					$price = false;
 				}
 
@@ -227,6 +234,7 @@ class ControllerProductCategory extends Controller {
 				} else {
 					$rating = false;
 				}
+				
 				
 				$data['products'][] = array(
 					'ID'  => $result['product_id'],

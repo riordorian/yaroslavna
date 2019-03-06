@@ -52,6 +52,9 @@
 .content .categories .categories__item a{
 	color: #574e44;
 }
+.content .categories .categories__item h4{
+	line-height: 1.4;
+}
 .content .categories .categories__item .image{
 	width: 100%;
 	height: 230px;
@@ -60,6 +63,12 @@
 	-webkit-background-size: 100% auto;
 	background-size: 100% auto;
 	transition: all .5s linear;
+}
+.content .categories .categories__item--high{
+	margin-bottom: 50px;
+}
+.content .categories .categories__item--high .image{
+	height: 430px;
 }
 .content .categories .categories__item a:hover .image{
 	-webkit-background-size: 110% auto;
