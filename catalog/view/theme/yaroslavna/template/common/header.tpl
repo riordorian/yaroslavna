@@ -117,6 +117,9 @@
                                 <a class="menu__btn ralign" href="/delivery_payment/">
                                     Доставка
                                 </a>
+                                <a class="menu__btn ralign" href="/payment/">
+                                    Оплата
+                                </a>
                                 <a class="menu__btn ralign" href="/workshop/">
                                     Мастерская
                                 </a>
