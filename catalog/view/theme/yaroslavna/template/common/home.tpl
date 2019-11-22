@@ -55,16 +55,33 @@
   </div>
 </div>
 
-<div class="m-t-xlg">
-  <div class="container">
-      <a class=" col-md-4 col-sm-6 col-xs-6 col-md-offset-4 col-sm-offset-3 col-xs-offset-3 btn btn--green btn--large btn--offer" href="/instruction.pdf" download target="_blank">
-        Как выбрать икону
-      </a>
+  <div class="m-t-xlg">
+    <div class="container">
+        <a class=" col-md-4 col-sm-6 col-xs-6 col-md-offset-4 col-sm-offset-3 col-xs-offset-3 btn btn--green btn--large btn--offer" href="/instruction.pdf" download target="_blank">
+          Как выбрать икону
+        </a>
     </div>
   </div>
+
+  <?if(!empty($categories)){
+    ?><div class="container m-t-xlg">
+      <div class="categories row"><?
+          foreach($categories as $arCategory){
+            ?><div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="categories__item">
+                <a href="<?=$arCategory['SECTION_PAGE_URL']?>">
+                  <div class="image" style="background-image: url('<?=$arCategory['IMAGE']?>');"></div>
+                  <p class="name"><?=$arCategory['NAME']?></p>
+                </a>
+              </div>
+            </div><?
+          }
+        ?></div>
+    </div><?
+  }?>
 </div>
 
-<?=$sections?>
+
 
 <div class=""></div>
 <?php echo $footer; ?>
