@@ -13,9 +13,9 @@
         <!--<div class="title_2 text-style-subtitle"><p>от 15 000 руб.</p></div>-->
         <br>
 
-        <div class="btn_wrap no_arrow js-mgnf-wrap">
-          <a data-modal-id="form" data-action="modal_form" class=" col-md-4 col-sm-6 col-xs-6 btn btn--green btn--large btn--offer js-mgnf" href="#order">
-            Заказать
+        <div class="btn_wrap no_arrow">
+          <a data-modal-id="form" data-action="modal_form" class=" col-md-4 col-sm-6 col-xs-6 btn btn--green btn--large btn--offer" href="/products/">
+            Каталог
           </a>
         </div>
       </div>
@@ -44,7 +44,7 @@
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-6 col-sm-12 col-xs-12">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/1HY3kLMrsA8?autoplay=1" frameborder="0" class="m-t-md" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/_xgCXmuR06Y?controls=0&autoplay=1&rel=0&showinfo=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col-md-6 col-sm-12 col-xs-12">
             <?=$description?>
@@ -64,6 +64,7 @@
   </div>
 </div>
 
+<?=$sections?>
 
 <div class=""></div>
 <?php echo $footer; ?>

@@ -19,7 +19,7 @@
                         </a>
                         <p class="company-name">
                             © 2016 Мастерская &laquo;Ярославна&raquo;<br>
-                            <a href="//goodweb.studio" target="_blank">Разработка</a> - <a href="//goodweb.studio" target="_blank">Goodweb.studio</a>
+                            <!--<a href="//goodweb.studio" target="_blank">Разработка</a> - <a href="//goodweb.studio" target="_blank">Goodweb.studio</a>-->
                         </p>
 
                     </div>

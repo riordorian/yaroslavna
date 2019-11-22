@@ -16,8 +16,7 @@ class ControllerProductSections extends Controller {
 			'separator' => '<span>&nbsp;»&nbsp;</span>',
 			'href' => $this->url->link('common/home')
 		);
-
-
+		
 		// Set the last category breadcrumb
 		$data['breadcrumbs'][] = array(
 			'text' => $this->language->get('text_section_name'),
@@ -42,8 +41,7 @@ class ControllerProductSections extends Controller {
 				'SECTION_PAGE_URL' => $this->url->link('product/sections', 'category_id=' . $result['category_id'])
 			);
 		}
-
-
+		
 		$this->response->setOutput($this->load->view('product/sections', $data));
 	}
 }
