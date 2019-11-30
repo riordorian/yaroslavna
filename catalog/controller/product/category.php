@@ -1,4 +1,7 @@
 <?php
+
+use dektrium\user\traits\EventTrait;
+
 class ControllerProductCategory extends Controller {
 	public function index() {
 		$this->load->language('product/category');
@@ -400,6 +403,17 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
+
+			$data['categories'] = array();
+			$results = $this->model_catalog_category->getCategories();
+			foreach ($results as $result) {
+				$data['categories'][] = array(
+					'NAME' => $result['name'],
+					'DESCRIPTION' => $result['description'],
+					'IMAGE' => '/image/' . $result['image'],
+					'SECTION_PAGE_URL' => $this->url->link('product/sections', 'category_id=' . $result['category_id'])
+				);
+			}
 
 			$this->response->setOutput($this->load->view('product/category', $data));
 		} else {

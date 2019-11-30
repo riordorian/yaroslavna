@@ -60,4 +60,22 @@ if( !empty($products) ){
   </div>
 <?php } ?>
 
+<?if(!empty($categories)){
+    ?><div class="container m-t-xlg">
+    <h2>Все разделы</h2>
+  <div class="categories row"><?
+          foreach($categories as $arCategory){
+            ?><div class="col-md-4 col-sm-4 col-xs-12">
+      <div class="categories__item">
+        <a href="<?=$arCategory['SECTION_PAGE_URL']?>">
+          <div class="image" style="background-image: url('<?=$arCategory['IMAGE']?>');"></div>
+          <p class="name"><?=$arCategory['NAME']?></p>
+        </a>
+      </div>
+    </div><?
+          }
+        ?></div>
+</div><?
+}?>
+
 <?php echo $footer; ?>
