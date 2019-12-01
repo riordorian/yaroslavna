@@ -18,7 +18,6 @@
 <h1 class="content__header">
   <span><?=$heading_title?></span>
 </h1><?
-
 if( !empty($products) ){
   ?><div class="category row"><?
     foreach($products as $arProduct){

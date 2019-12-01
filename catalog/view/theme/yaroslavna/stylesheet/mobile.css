@@ -5,6 +5,9 @@
 	.slick-slide.main__offer{
 		min-height: auto;
 	}
+	.content .product-card .product__img div {
+		justify-content: center;
+	}
 }
 @media screen and (max-width: 767px) {
 	.header .header__logo{
@@ -193,9 +196,9 @@
 		text-align: justify;
 	}
 	.content .product-card .product__properties div p{
-		vertical-align: top;
-		display: inline-block;
-		margin-bottom: 0;
+		/*vertical-align: top;*/
+		/*display: inline-block;*/
+		/*margin-bottom: 0;*/
 	}
 	.content .product-card .product__name{
 		max-width: none;

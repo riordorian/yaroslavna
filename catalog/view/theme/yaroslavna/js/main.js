@@ -36,6 +36,8 @@ $(function()
             slide: '.main__offer'
         });
 	}
+
+	$("[name=PHONE]").inputmask({"mask": "+7 (999) 999-9999"});
 });
 
 /**

@@ -46,6 +46,7 @@
     <!--JS-->
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/svg.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/slick/slick.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/inputmask.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/main.js?<?=time()?>"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/send.js?<?=time()?>"></script>
@@ -110,6 +111,9 @@
                                 </a>
                                 <a class="menu__btn" href="/ikonostasi/">
                                     Иконостасы
+                                </a>
+                                <a class="menu__btn" href="/restoration/">
+                                    Реставрация
                                 </a>
                                 <a class="menu__btn" href="/about/">
                                     О компании

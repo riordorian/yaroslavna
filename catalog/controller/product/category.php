@@ -201,8 +201,19 @@ class ControllerProductCategory extends Controller {
 			$product_total = $this->model_catalog_product->getTotalProducts($filter_data);
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
-
 			foreach ($results as $result) {
+				# Get product min price
+				$prices = array();
+				$options = $this->model_catalog_product->getProductOptions($result['product_id']);
+
+				foreach ($options as $option) {
+					if ($option['name'] == 'Размер') {
+						$prices = array_column($option['product_option_value'], 'price');
+					}
+				}
+				$minPrice = !empty($prices) ? min($prices) : 0;
+				$result['price'] = !empty($minPrice) ? $minPrice : $result['price'];
+				
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 //					$image = '/image/' . $result['image'];
@@ -210,11 +221,12 @@ class ControllerProductCategory extends Controller {
 					$image = $this->model_tool_image->resize('placeholder.png', $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 				}
 
-				if( $category_info['keyword'] == 'ikonostasy' ){
+				$categories = $this->model_catalog_product->getCategories($result['product_id']);
+				if( $category_info['keyword'] == 'ikonostasy' || in_array('Иконостасы', array_column($categories, 'meta_title')) ){
 					$price = false;
 				}
 				elseif ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-					$price = $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+					$price = (!empty($minPrice) ? 'от ' : '') . $this->currency->format($this->tax->calculate($result['price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 				}
 				else {
 					$price = false;
@@ -237,7 +249,6 @@ class ControllerProductCategory extends Controller {
 				} else {
 					$rating = false;
 				}
-				
 				
 				$data['products'][] = array(
 					'ID'  => $result['product_id'],

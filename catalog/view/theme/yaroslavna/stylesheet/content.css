@@ -171,6 +171,13 @@
 .content .product-card .product__img a{
 	outline: none;
 }
+.content .product-card .product__img div {
+	display: flex;
+	margin-top: 20px;
+}
+.content .product-card .product__img div a:first-of-type{
+	margin-left: -8px;
+}
 .content .product-card .product__info{
 	padding-left: 8px;
 }

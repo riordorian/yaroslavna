@@ -26,10 +26,14 @@
 		<img src="<?= $arFirstImg['thumb']; ?>" class="img-responsive" alt="">
 	</a><?
 
-	foreach( $images as $arImg ){
-		?><a href="<?=$arImg['popup']?>"></a><?
-	}
-  ?></div>
+    ?><div><?
+        foreach( $images as $arImg ){
+            ?><a href="<?=$arImg['popup']?>">
+              <img src="<?= $arImg['popup']; ?>" class="img-responsive" width="90">
+            </a><?
+        }
+    ?></div>
+  </div>
 
   <div class="col-md-5 product__info">
     <div class="product__properties">

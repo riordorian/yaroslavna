@@ -410,7 +410,7 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getCategories($product_id) {
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category WHERE product_id = '" . (int)$product_id . "'");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "product_to_category p2c LEFT JOIN " . DB_PREFIX ."category c on p2c.category_id=c.category_id LEFT JOIN " . DB_PREFIX . "category_description cd on c.category_id=cd.category_id WHERE p2c.product_id = '" . (int)$product_id . "'");
 
 		return $query->rows;
 	}
