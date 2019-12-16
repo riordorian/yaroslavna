@@ -11,7 +11,9 @@ $(function()
 
 	$(document).on('change', '.js-size-select', function(){
 		var newPrice = number_format($(this).find('option:selected').data('price'), 0, '', ' ');
+		var newOldPrice = number_format($(this).find('option:selected').data('old-price'), 0, '', ' ');
 		$('.js-price-val').text(newPrice);
+		$('.js-old-price-val').text(newOldPrice);
 		$('.js-price').val(newPrice);
 		$('.js-size').val($(this).find('option:selected').val())
 	});
@@ -38,6 +40,52 @@ $(function()
 	}
 
 	$("[name=PHONE]").inputmask({"mask": "+7 (999) 999-9999"});
+
+
+	if ($.cookie('personal_sale') == undefined && $.cookie('personal_sale_used') !== "true") {
+		setTimeout(function () {
+			$.confirm({
+				title: 'Получите скидку на первый заказ!',
+				content: 'Всем новым клиентам мы предоставляем <b>скидку 10%</b> на первый заказ. Наш специалист учтет эту скидку при обсуждении с вами деталей изготовления иконы.',
+				type: 'green',
+				closeIcon: true,
+				columnClass: 'col-md-6 col-md-offset-3',
+				draggable: false,
+				buttons: {
+					get: {
+						btnClass: 'btn-success',
+						text: 'Получить скидку',
+						action: function () {
+							$.cookie('personal_sale', '10');
+							yaCounter27298259.reachGoal('personal_sale');
+
+							$.confirm({
+								title: 'Скидка активирована!',
+								content: 'Менеджер получит информацию о вашей персональной скидке после оформлении заказа.',
+								type: 'green',
+								// closeIcon: true,
+								columnClass: 'col-md-6 col-md-offset-3',
+								draggable: false,
+								buttons: {
+									closeBtn: {
+										text: 'Закрыть',
+										btnClass: 'btn-success',
+										action: function () {
+											window.location.reload();
+										}
+									}
+								},
+							});
+						}
+					},
+					closeBtn: {
+						text: 'Закрыть'// With spaces and symbols
+					}
+				}
+			});
+		}, 6000);
+	}
+
 });
 
 /**

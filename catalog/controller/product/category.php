@@ -202,6 +202,7 @@ class ControllerProductCategory extends Controller {
 
 			$results = $this->model_catalog_product->getProducts($filter_data);
 			foreach ($results as $result) {
+				$sale = 0;
 				# Get product min price
 				$prices = array();
 				$options = $this->model_catalog_product->getProductOptions($result['product_id']);
@@ -210,10 +211,21 @@ class ControllerProductCategory extends Controller {
 					if ($option['name'] == 'Размер') {
 						$prices = array_column($option['product_option_value'], 'price');
 					}
+
+					if ($option['name'] == 'Скидка, %') {
+						$sale = reset($option['product_option_value'])['name'] ?? 0;
+					}
 				}
 				$minPrice = !empty($prices) ? min($prices) : 0;
 				$result['price'] = !empty($minPrice) ? $minPrice : $result['price'];
-				
+
+				if (!empty($sale)) {
+					$result['old_price'] = $result['price'];
+					$result['price'] = $result['price'] * (1 - (int) $sale / 100);
+					$result['old_price'] = $this->currency->format($this->tax->calculate($result['old_price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+				}
+
+
 				if ($result['image']) {
 					$image = $this->model_tool_image->resize($result['image'], $this->config->get($this->config->get('config_theme') . '_image_product_width'), $this->config->get($this->config->get('config_theme') . '_image_product_height'));
 //					$image = '/image/' . $result['image'];
@@ -260,6 +272,7 @@ class ControllerProductCategory extends Controller {
 					'LENGTH_UNITS'   => $result['length_class'],
 					'DESCRIPTION' => utf8_substr(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get($this->config->get('config_theme') . '_product_description_length')) . '..',
 					'PRICE'       => $price,
+					'OLD_PRICE'       => $result['old_price'] ?? 0,
 					'SPECIAL'     => $special,
 					'MINIMUM'     => ($result['minimum'] > 0) ? $result['minimum'] : 1,
 					'HREF'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)

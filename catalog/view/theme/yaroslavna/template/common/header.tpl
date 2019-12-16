@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/js/slick/slick.css">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/js/slick/slick-theme.css">
     <link rel="stylesheet" href="catalog/view/javascript/jquery/magnific/magnific-popup.css">
+    <link rel="stylesheet" href="catalog/view/theme/yaroslavna/assets/node_modules/jquery-confirm/dist/jquery-confirm.min.css">
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:300,400,500,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
     <!--СТИЛИ КОНЕЦ-->
 
@@ -47,6 +48,8 @@
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/svg.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/slick/slick.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/inputmask.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/yaroslavna/assets/node_modules/jquery-confirm/dist/jquery-confirm.min.js"></script>
+    <script type="text/javascript" src="catalog/view/theme/yaroslavna/assets/node_modules/jquery.cookie/jquery.cookie.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/jquery/magnific/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/main.js?<?=time()?>"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/send.js?<?=time()?>"></script>

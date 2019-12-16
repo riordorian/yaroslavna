@@ -5,6 +5,8 @@ class ControllerProductProduct extends Controller {
 	public function index() {
 		$this->load->language('product/product');
 
+		$data['personal_sale'] = $_COOKIE['personal_sale'] ?? false;
+
 		$data['breadcrumbs'] = array();
 
 		$data['breadcrumbs'][] = array(
@@ -334,13 +336,12 @@ class ControllerProductProduct extends Controller {
 					'thumb' => $thumb
 				);
 			}
-
-
+			
 			if( $category_info['keyword'] == 'ikonostasy' ){
 				$data['price'] = false;
 			}
 			elseif ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-				$data['price'] = $this->currency->format($this->tax->calculate($product_info['price'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
+				$data['price'] = $product_info['price'];
 			} else {
 				$data['price'] = false;
 			}
@@ -370,6 +371,13 @@ class ControllerProductProduct extends Controller {
 
 			$data['options'] = array();
 
+			$options = $this->model_catalog_product->getProductOptions($this->request->get['product_id']);
+			foreach ($options as $option) {
+				if( $option['name'] == 'Скидка, %' ){
+					$sale = reset($option['product_option_value'])['name'] ?? 0;
+				}
+			}
+			
 			foreach ($this->model_catalog_product->getProductOptions($this->request->get['product_id']) as $option) {
 				$product_option_value_data = array();
 
@@ -382,9 +390,17 @@ class ControllerProductProduct extends Controller {
 					'value'                => array(),
 					'required'             => $option['required']
 				);
-				foreach ($option['product_option_value'] as $option_value) {
+				foreach ($option['product_option_value'] as $k => $option_value) {
 					if( $option['name'] == 'Размер' ){
-						$data['options'][$option['option_id']]['value'][(int)$option_value['price']] = $option_value['name'];
+						$data['options'][$option['option_id']]['value'][$option_value['name']] = [
+							'old_price' => empty($sale) ? 0 : (int)$option_value['price'],
+							'price' => empty($sale) ? (int)$option_value['price'] : (int)$option_value['price'] * (1 - $sale / 100)
+						];
+						
+						unset($data['options'][$option['option_id']]['value'][$k]);
+					}
+					elseif( $option['name'] == 'Скидка, %' ){
+						continue;
 					}
 					else{
 						$data['options'][$option['option_id']]['value'][] = $option_value['name'];
@@ -392,14 +408,18 @@ class ControllerProductProduct extends Controller {
 				}
 
 				if(  $option['name'] == 'Размер' ){
-					uasort($data['options'][$option['option_id']]['value'], function($a, $b){
+					uksort($data['options'][$option['option_id']]['value'], function($a, $b){
 						return strnatcmp($a, $b);
 					});
 
-					$data['price'] = number_format(key($data['options'][$option['option_id']]['value']), 0, '', ' ');
+					$data['price'] = reset($data['options'][$option['option_id']]['value'])['price'];
 					$data['size'] = reset($data['options'][$option['option_id']]['value']);
 				}
 			}
+
+			$data['old_price'] = empty($sale) ? 0 : number_format($data['price'], 0, '', ' ');
+			$price = empty($sale) ? $data['price'] : $data['price'] * (1 - $sale / 100);
+			$data['price'] =  $this->currency->format($price, $this->session->data['currency']);
 
 			if( empty($data['size']) ){
 			    $data['size'] = implode(' x ', [$data['width'], $data['height']]);
@@ -491,7 +511,7 @@ class ControllerProductProduct extends Controller {
 					'href'        => $this->url->link('product/product', 'product_id=' . $result['product_id'])
 				);
 			}
-
+			
 			$data['tags'] = array();
 
 			if ($product_info['tag']) {
@@ -508,7 +528,7 @@ class ControllerProductProduct extends Controller {
 			$data['recurrings'] = $this->model_catalog_product->getProfiles($this->request->get['product_id']);
 
 			$this->model_catalog_product->updateViewed($this->request->get['product_id']);
-
+			
 			$data['column_left'] = $this->load->controller('common/column_left');
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
@@ -591,7 +611,7 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
+			
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 		}
 	}

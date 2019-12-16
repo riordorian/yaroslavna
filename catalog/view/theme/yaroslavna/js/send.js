@@ -4,6 +4,8 @@ $(document).on('click', '.btn--registration, .btn--order-ikon', function(event)
 	var $form = $(this).closest('form');
 	var bHasErrors = false;
 
+	yaCounter27298259.reachGoal('zayavka');
+
 	$form.find('input:required').each(function() {
 		this.setCustomValidity('');
 		if( !this.checkValidity() ){
@@ -44,6 +46,12 @@ $(document).on('click', '.btn--registration, .btn--order-ikon', function(event)
 				else{
 					$('#res_link').eq(0).trigger('click');
 				}
+
+				if ($.cookie('personal_sale') != undefined) {
+					$.removeCookie('personal_sale');
+				}
+
+				$.cookie('personal_sale_used', true);
 			}
 		}, 'json');
 	}

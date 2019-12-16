@@ -33,8 +33,12 @@ if( !empty($products) ){
             }
           ?>
 
-          <?if( $arProduct['PRICE'] ) {?>
-            <div class="col-md-6 col-sm-6 col-xs-6 price">
+          <?if( $arProduct['PRICE'] ) {
+            ?><div class="col-md-6 col-sm-6 col-xs-6 price"><?
+                if (!empty($arProduct['OLD_PRICE'])) {
+                    ?><strike><?=$arProduct['OLD_PRICE']?><span class="rub"></span></strike><br><?
+                }
+            ?>
               <?=$arProduct['PRICE']?>
               <span class="rub"></span>
             </div>

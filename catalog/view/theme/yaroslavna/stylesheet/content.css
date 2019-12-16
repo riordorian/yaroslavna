@@ -152,6 +152,10 @@
 	font-weight: 500;
 	padding: 0;
 }
+.content .category .category__item .price strike {
+	color: #a3a3a3;
+	font-size: 14px;
+}
 .content .category .action-btn{
 	padding: 0;
 }
@@ -204,6 +208,10 @@
 .content .product-card .price .property__text{
 	font-size: 30px;
 }
+.content .product-card .price .property__text strike{
+	font-size: 16px;
+	color: #a3a3a3;
+}
 .content .product-card .description{
 	text-align: justify;
 	font-size: 13px;
@@ -225,6 +233,9 @@
 	margin: 0px 0px 28px 0px;
 }
 
+.content .product-card form p:not(.status){
+	color: white;
+}
 
 /*СТАТЬИ*/
 .content .article{

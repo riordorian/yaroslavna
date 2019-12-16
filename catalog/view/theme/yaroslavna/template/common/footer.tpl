@@ -20,6 +20,9 @@
                         <p class="company-name">
                             © 2016 Мастерская &laquo;Ярославна&raquo;<br>
                             <!--<a href="//goodweb.studio" target="_blank">Разработка</a> - <a href="//goodweb.studio" target="_blank">Goodweb.studio</a>-->
+                            ИП Смирнов Юрий Игоревич<br>
+                            ИНН - 760408498615<br>
+                            ОГРН - 318762700034862
                         </p>
 
                     </div>
@@ -44,6 +47,8 @@
                                 <a href="/about/">О компании</a>
                                 <br>
                                 <a href="/workshop/">Фото мастерской</a>
+                                <br>
+                                <a href="/restoration/">Реставрация</a>
                                 <br>
                             </li>
                             <li class="col-md-4">

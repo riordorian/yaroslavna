@@ -58,6 +58,8 @@ system/storage*
 /tests/phpunit/composer.lock
 /tests/phpunit/bootstrap.php
 
+/catalog/view/theme/yaroslavna/assets/node_modules/*
+
 # IDE Project files
 /.idea
 .idea

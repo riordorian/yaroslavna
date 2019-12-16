@@ -50,8 +50,8 @@
                 $bHasSize = true;
                 ?><span class="property__name"><?=$arOpt['name']?>:</span>
                 <select name="size" class="js-size-select"><?
-                   foreach( $arOpt['value'] as $optPrice => $optVal ){
-                      ?><option value="<?=$optVal?>" data-price="<?=$optPrice?>"><?=$optVal?></option><?
+                   foreach( $arOpt['value'] as $optSize => $optVal ){
+                      ?><option value="<?=$optSize?>" data-price="<?=$optVal['price']?>" data-old-price="<?=$optVal['old_price']?>"><?=$optSize?></option><?
                    }
                 ?></select><?
               }
@@ -65,8 +65,11 @@
         }
         if( $price ){
             ?><p class="price">
-              <span class="property__name">Цена:</span>
-              <span class="property__text"><span class="js-price-val"><?=$price?></span>&thinsp;<span class="rub"></span></span>
+                <span class="property__name">Цена:</span><?
+                if (!empty($old_price)){
+                    ?><span class="property__text"><strike><span class="js-old-price-val"><?=$old_price?></span>&thinsp;<span class="rub"></span></strike></span><?
+                }
+                ?>   <span class="property__text"><span class="js-price-val"><?=$price?></span>&thinsp;<span class="rub"></span></span>
             </p>
             <p class="helper"></p><?
         }
@@ -100,8 +103,11 @@
       <input type="hidden" value="<?=$price?>" name="PRICE" class="js-price">
       <input type="hidden" value="<?=$size?>" name="SIZE" class="js-size">
       <input type="text" name="NAME" class="form__field" placeholder="ФИО *" required>
-      <input type="text" name="PHONE" class="form__field" placeholder="Телефон *" required>
-      <input type="submit" class="col-md-8 col-xs-8 btn btn--order btn--brown btn--order-ikon" value="Оформить заказ">
+      <input type="text" name="PHONE" class="form__field" placeholder="Телефон *" required><?
+       if (!empty($personal_sale)) {
+            ?><p class="text-white">Вам предоставлена скидка <b><?=$personal_sale?>%</b> на первый заказ</p><?
+       }
+      ?><input type="submit" class="col-md-8 col-xs-8 btn btn--order btn--brown btn--order-ikon" value="Оформить заказ">
       <div class="clear"></div>
       <p class="status">&nbsp;</p>
       <div class="clear"></div>
