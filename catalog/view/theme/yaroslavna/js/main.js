@@ -8,6 +8,10 @@ $(function()
 		$(this).toggleClass('navbar-toggle--open');
 	});
 
+	$(document).on('click', '.js-order-btn', function() {
+		$('.js-form').find('input[type=text]').eq(0).trigger('focus');
+	});
+
 
 	$(document).on('change', '.js-size-select', function(){
 		var newPrice = number_format($(this).find('option:selected').data('price'), 0, '', ' ');
@@ -42,7 +46,7 @@ $(function()
 	$("[name=PHONE]").inputmask({"mask": "+7 (999) 999-9999"});
 
 
-	if ($.cookie('personal_sale') == undefined && $.cookie('personal_sale_used') !== "true") {
+	if ($.cookie('personal_sale') == undefined && $.cookie('personal_sale_used') !== "true" && $.cookie('personal_sale_showed') !== "true" && $.cookie('personal_sale_declined') !== "true") {
 		setTimeout(function () {
 			$.confirm({
 				title: 'Получите скидку на первый заказ!',
@@ -51,6 +55,9 @@ $(function()
 				closeIcon: true,
 				columnClass: 'col-md-6 col-md-offset-3',
 				draggable: false,
+				onOpen: function () {
+					$.cookie('personal_sale_showed', 'true');
+				},
 				buttons: {
 					get: {
 						btnClass: 'btn-success',
@@ -79,12 +86,21 @@ $(function()
 						}
 					},
 					closeBtn: {
-						text: 'Закрыть'// With spaces and symbols
+						text: 'Закрыть',
+						action: function () {
+							$.cookie('personal_sale_declined', 'true');
+							yaCounter27298259.reachGoal('personal_sale_declined');
+						}
 					}
 				}
 			});
 		}, 6000);
 	}
+
+
+	$(document).on('click', '.js-how-to', function () {
+		yaCounter27298259.reachGoal('manual_downloaded');
+	});
 
 });
 

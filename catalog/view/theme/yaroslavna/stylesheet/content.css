@@ -221,11 +221,11 @@
 	padding-right: 0;
 }
 .content .product-card form{
-	background: #224039;
+	background: #ded0b0;
 	padding: 26px 30px;
 }
 .content .product-card form .form__action{
-	font-size: 20px;
+	font-size: 25px;
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
@@ -234,7 +234,11 @@
 }
 
 .content .product-card form p:not(.status){
-	color: white;
+	color: black;
+}
+
+.content .product-card .nav-tabs li a {
+	color: #555;
 }
 
 /*СТАТЬИ*/

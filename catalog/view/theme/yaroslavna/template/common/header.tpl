@@ -45,6 +45,7 @@
     <!--СТИЛИ КОНЕЦ-->
 
     <!--JS-->
+    <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/bootstrap-3.4.1.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/svg.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/slick/slick.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/inputmask.js"></script>

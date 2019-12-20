@@ -222,6 +222,7 @@ class ControllerProductCategory extends Controller {
 				if (!empty($sale)) {
 					$result['old_price'] = $result['price'];
 					$result['price'] = $result['price'] * (1 - (int) $sale / 100);
+					$result['price'] = round((float)$result['price'] / 1000, 0, PHP_ROUND_HALF_UP) * 1000;
 					$result['old_price'] = $this->currency->format($this->tax->calculate($result['old_price'], $result['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 				}
 

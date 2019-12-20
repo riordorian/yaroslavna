@@ -57,7 +57,7 @@
 
   <div class="m-t-xlg">
     <div class="container">
-        <a class=" col-md-4 col-sm-6 col-xs-6 col-md-offset-4 col-sm-offset-3 col-xs-offset-3 btn btn--green btn--large btn--offer" href="/instruction.pdf" download target="_blank">
+        <a class=" col-md-4 col-sm-6 col-xs-6 col-md-offset-4 col-sm-offset-3 col-xs-offset-3 btn btn--green btn--large btn--offer js-how-to" href="/instruction.pdf" download target="_blank">
           Как выбрать икону
         </a>
     </div>

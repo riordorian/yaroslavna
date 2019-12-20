@@ -84,9 +84,16 @@
         </p><?
       }
 
-      ?><div class="m-t-lg">
-            <a class="btn btn--green btn--medium btn--instruction btn--green" href="/instruction.pdf" download target="_blank">
+      ?>
+        <!--<div class="m-t-lg">
+            <a class="btn btn--green btn--medium btn--instruction btn--green js-how-to" href="/instruction.pdf" download target="_blank">
                 Как выбрать икону
+            </a>
+        </div>-->
+
+        <div class="m-t-lg">
+            <a class="btn btn--green btn--medium btn--instruction btn--green js-order-btn" href="javascript:void(0);">
+                Заказать
             </a>
         </div>
       </div>
@@ -107,7 +114,7 @@
        if (!empty($personal_sale)) {
             ?><p class="text-white">Вам предоставлена скидка <b><?=$personal_sale?>%</b> на первый заказ</p><?
        }
-      ?><input type="submit" class="col-md-8 col-xs-8 btn btn--order btn--brown btn--order-ikon" value="Оформить заказ">
+      ?><input type="submit" class="col-md-8 col-xs-8 btn btn--order btn--green btn--order-ikon btn--instruction" value="Оформить заказ">
       <div class="clear"></div>
       <p class="status">&nbsp;</p>
       <div class="clear"></div>
@@ -117,23 +124,76 @@
     <div class="clearfix"></div>
     <br>
     <div class="col-md-12 col-mt">
-        Данную икону можно заказать и в других размерах. Для уточнения деталей заказа вы можете связаться с нами по телефону.
-        <a href="tel:+79106653117">+7 (910) 665-31-17</a>
+        <h4>Данную икону можно заказать и в других размерах. Для уточнения деталей заказа вы можете связаться с нами по телефону.
+        <a href="tel:+79106653117">+7 (910) 665-31-17</a></h4>
+    </div>
 
-        <h3>Доставка</h3>
-        <div>
-            Мы осуществляем доставку икон по всей России и странам СНГ.
-            Получить ваш заказ можно следующими способами
-            <ul>
-                <li>Самовывоз</li>
-                <li>Доставка Почтой России</li>
-                <li>Доставка транспортной компанией до пункта выдачи заказов</li>
-                <li>Доставка курьером транспортной компанией до двери</li>
-            </ul>
+    <div class="clearfix"></div>
+    <div class="col-md-12 m-t-lg">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Рекомендации по уходу</a></li>
+            <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Доставка</a></li>
+        </ul>
 
-            Доставка оплачивается дополнительно к стоимости заказа.
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <h3>Рекомендации по уходу</h3>
+                <p>Для защиты от внешних факторов рекомендуется помещать иконы в застекленный киот. Он позволит сохранить оптимальный микроклимат и обеспечит длительную сохранность.
+                    <br><br>
+                   Смахивать пыль лучше всего мягкой кисточкой без нажима.
+                    <br><br>
+                   В случае сильного загрязнения, потемнения или повреждения необходимо обратиться к реставратору или иконописцу, написавшему икону.
+                    <br><br>
+                   Нельзя хранить икону в неотапливаемых или влажных помещениях, располагать рядом с батареями, открытыми окнами. Иконы плохо переносят перепады температур и влажности, это может повредить красочный слой или деформировать доску.
+                </p>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <h3>Доставка</h3>
+                <div>
+                    Мы осуществляем доставку икон по всей России и странам СНГ.
+                    Получить ваш заказ можно следующими способами
+                    <ul>
+                        <li>Самовывоз</li>
+                        <li>Доставка Почтой России</li>
+                        <li>Доставка транспортной компанией до пункта выдачи заказов</li>
+                        <li>Доставка курьером транспортной компанией до двери</li>
+                    </ul>
+
+                    Доставка оплачивается дополнительно к стоимости заказа.
+                </div>
+            </div>
         </div>
     </div>
+    <div class="clearfix"></div>
+
+    <?
+    if (!empty($popular_products)) {
+        ?><div class="content col-md-12 m-t-lg">
+            <h2>Популярные иконы</h2>
+            <div class="category row"><?
+                foreach($popular_products as $popular) {
+                    ?><div class="col-md-3 col-sm-4 col-xs-6 category__item">
+                        <a href="<?=$popular['url']?>">
+                            <img src="<?=$popular['image_crop']?>" alt="<?=$popular['name']?>" title="<?=$popular['name']?>">
+                            <p class="name ">
+                                <?=$popular['name']?><br>
+                                (<?=$popular['model']?>)
+                            </p>
+
+                            <!--<p class="size">Размер: 20х24 см</p>-->
+                            <!--<div class="col-md-6 col-sm-6 col-xs-6 price">              от 25 000              <span class="rub"></span>-->
+                            <div class="col-md-6 col-sm-6 col-xs-6 action-btn m-t-md">
+                                <span href="<?=$popular['url']?>" class="btn btn--buy">Подробнее</span>
+                            </div>
+                        </a>
+                    </div><?
+                }
+            ?></div>
+        </div><?
+    }
+?>
+
+
 </div>
 
 <script type="text/javascript"><!--

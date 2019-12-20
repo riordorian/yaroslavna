@@ -419,6 +419,7 @@ class ControllerProductProduct extends Controller {
 
 			$data['old_price'] = empty($sale) ? 0 : number_format($data['price'], 0, '', ' ');
 			$price = empty($sale) ? $data['price'] : $data['price'] * (1 - $sale / 100);
+			$price = round((float)$price / 1000, 0, PHP_ROUND_HALF_UP) * 1000;
 			$data['price'] =  $this->currency->format($price, $this->session->data['currency']);
 
 			if( empty($data['size']) ){
@@ -432,6 +433,14 @@ class ControllerProductProduct extends Controller {
 			}
 
 			$data['review_status'] = $this->config->get('config_review_status');
+
+			$data['popular_products'] = $this->model_catalog_product->getPopularProducts(4);
+			foreach ($data['popular_products'] as &$popularProduct) {
+				$popularProduct['image_crop'] = $this->model_tool_image->resize($popularProduct['image'], 150, 200);
+				$popularProduct['url'] = $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $popularProduct['product_id'] . $url);
+			}
+			unset($latestProduct);
+			
 
 			if ($this->config->get('config_review_guest') || $this->customer->isLogged()) {
 				$data['review_guest'] = true;
