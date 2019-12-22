@@ -113,6 +113,9 @@
                                 <a class="menu__btn" href="/products/">
                                     Каталог
                                 </a>
+                                <a class="menu__btn" href="/calc/">
+                                    Калькулятор цен
+                                </a>
                                 <a class="menu__btn" href="/ikonostasi/">
                                     Иконостасы
                                 </a>

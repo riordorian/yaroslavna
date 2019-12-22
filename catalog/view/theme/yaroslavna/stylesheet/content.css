@@ -370,3 +370,14 @@
 	font-size: 17px;
 	font-weight: 300;
 }
+
+form[name=Kalkulator] td{
+	vertical-align: top;
+}
+.calctext {
+	width: 100%;
+}
+.calctext select {
+	height: 30px;
+	margin-bottom: 20px;
+}
