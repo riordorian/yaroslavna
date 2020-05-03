@@ -92,6 +92,9 @@
     padding: 20px;
     border: 2px solid #224039;
 }
+.question.question--active {
+    border-color: #299a66;
+}
 .question1 {
     border: none;
 }

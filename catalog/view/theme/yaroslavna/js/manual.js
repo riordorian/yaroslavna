@@ -13,6 +13,14 @@ $(function () {
             $('.question2').html('');
             $('.question2').append('<i class="icon-' + elem.attr('rel') + '"><i>');
             $('.question2').append(elem.siblings('.q1q2').html());
+
+            if ($('.question2 > .category').length > 0) {
+                $('.question2').addClass('question question--active');
+            }
+            else {
+                $('.question2').removeClass('question--active');
+            }
+
             $('.question2').append('<div class="clear"></div>');
             $("html, body").animate({scrollTop: $('.question2').offset().top}, 1000);
             $(".question2 img").unveil(200);
@@ -35,6 +43,14 @@ $(function () {
             $('.question3').html('');
             $('.question3').append('<i class="icon-' + elem.attr('rel') + '"><i>');
             $('.question3').append(elem.siblings('.q2q3').html());
+
+            if ($('.question3 > .category').length > 0) {
+                $('.question3').addClass('question question--active');
+            }
+            else {
+                $('.question3').removeClass('question--active');
+            }
+
             $('.question3').append('<div class="clear"></div>');
             $("html, body").animate({scrollTop: $('.question3').offset().top}, 1000);
             $(".question3 img").unveil(200);
@@ -43,6 +59,7 @@ $(function () {
         $('.question2 ul>li>a').each(function () {
             $(this).removeClass('active');
         });
+
         $(this).addClass('active');
         return false;
     });
@@ -56,6 +73,14 @@ $(function () {
             $('.question4').html('');
             $('.question4').append('<i class="icon-' + elem.attr('rel') + '"><i>');
             $('.question4').append(elem.siblings('.q3q4').html());
+
+            if ($('.question4 > .category').length > 0) {
+                $('.question4').addClass('question question--active');
+            }
+            else {
+                $('.question4').removeClass('question--active');
+            }
+
             $('.question4').append('<div class="clear"></div>');
             $("html, body").animate({scrollTop: $('.question4').offset().top}, 1000);
             $(".question4 img").unveil(200);
@@ -76,6 +101,7 @@ $(function () {
             $('.question5').html('');
             $('.question5').append('<i class="icon-' + elem.attr('rel') + '"><i>');
             $('.question5').append(elem.siblings('.q4q5').html());
+            $('.question5').addClass('question question--active');
             $('.question5').append('<div class="clear"></div>');
             $("html, body").animate({scrollTop: $('.question5').offset().top}, 1000);
             $(".question5 img").unveil(200);
