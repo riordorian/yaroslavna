@@ -54,6 +54,8 @@
                             <li class="col-md-4">
                                 <a href="/delivery_payment/">Доставка и оплата</a>
                                 <br>
+                                <a href="/consent/">Политика конфиденциальности</a>
+                                <br>
                                 <a href="/contacts/">Контакты</a>
                             </li>
                         </ul>
@@ -62,8 +64,8 @@
                         <p class="footer__phone">
                             <a href="tel:+79106653117">+7 (910) 665-31-17</a>
                         </p>
-                        <a href="#call" class="btn btn--medium btn--brown js-mgnf">Заказать
-                            звонок
+                        <a href="#call" class="btn btn--medium btn--brown js-mgnf">Позвонить
+                            мне
                         </a>
                     </div>
                 </div>
@@ -150,8 +152,25 @@
         <noscript><div><img src="https://mc.yandex.ru/watch/27298259" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
         <!-- /Yandex.Metrika counter -->
 
-                        <script type='text/javascript'>
+                        <!--<script type='text/javascript'>
                             (function(){ var widget_id = 'prrMQBd6XZ';var d=document;var w=window;function l(){
-                                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+                                var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>-->
+
+                        
+                        <script type='text/javascript'>
+                            (function(d, w, m) {
+                                window.supportAPIMethod = m;
+                                var s = d.createElement('script');
+                                s.type ='text/javascript'; s.id = 'supportScript'; s.charset = 'utf-8';
+                                s.async = true;
+                                var id = 'ea2490320f56055af46ecc96cf6e2007';
+                                s.src = '//lcab.talk-me.ru/support/support.js?h='+id;
+                                var sc = d.getElementsByTagName('script')[0];
+                                w[m] = w[m] || function() { (w[m].q = w[m].q || []).push(arguments); };
+                                if (sc) sc.parentNode.insertBefore(s, sc);
+                                else d.documentElement.firstChild.appendChild(s);
+                            })(document, window, 'TalkMe');
+                        </script>
+
     </body>
 </html>

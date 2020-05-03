@@ -12,6 +12,13 @@ $(function()
 		$('.js-form').find('input[type=text]').eq(0).trigger('focus');
 	});
 
+	/*$('.js-ajax-popup-link').magnificPopup({
+		type: 'ajax',
+		closeOnBgClick: true,
+		showCloseBtn: true,
+		closeBtnInside: true,
+	});*/
+
 
 	$(document).on('change', '.js-size-select', function(){
 		var newPrice = number_format($(this).find('option:selected').data('price'), 0, '', ' ');
@@ -46,7 +53,7 @@ $(function()
 	$("[name=PHONE]").inputmask({"mask": "+7 (999) 999-9999"});
 
 
-	if ($.cookie('personal_sale') == undefined && $.cookie('personal_sale_used') !== "true" && $.cookie('personal_sale_showed') !== "true" && $.cookie('personal_sale_declined') !== "true") {
+	/*if ($.cookie('personal_sale') == undefined && $.cookie('personal_sale_used') !== "true" && $.cookie('personal_sale_showed') !== "true" && $.cookie('personal_sale_declined') !== "true") {
 		setTimeout(function () {
 			$.confirm({
 				title: 'Получите скидку на первый заказ!',
@@ -95,7 +102,7 @@ $(function()
 				}
 			});
 		}, 6000);
-	}
+	}*/
 
 
 	$(document).on('click', '.js-how-to', function () {

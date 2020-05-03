@@ -223,6 +223,10 @@ a:hover{
 .btn--order:hover{
 	border-width: 2px;
 }
+input:disabled, input[disabled],
+.form__field:disabled, .form__field[disabled] {
+	background: #e4e4e4;
+}
 .form__field{
 	width: 100%;
 	height: 38px;

@@ -33,4 +33,5 @@ if( count($categories)  > 0 ){
    ?></div><?
 }?>
 
+
 <?php echo $footer; ?>

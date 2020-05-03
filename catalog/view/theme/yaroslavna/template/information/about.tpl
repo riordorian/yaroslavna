@@ -23,7 +23,7 @@
   </div>
 </div>
 </div>
-<embed src="/yaroslavna.pdf#page=5" width="100%" height="685"
+<embed src="/yaroslavna.pdf#page=1" width="100%" height="685"
          type='application/pdf' id="embed-pdf"">
 
     <div class="container">

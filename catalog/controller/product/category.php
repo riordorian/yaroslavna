@@ -23,12 +23,14 @@ class ControllerProductCategory extends Controller {
 		} else {
 			$sort = 'p.sort_order';
 		}
+		$sort = 'p.price';
 
 		if (isset($this->request->get['order'])) {
 			$order = $this->request->get['order'];
 		} else {
 			$order = 'ASC';
 		}
+		$order = 'ASC';
 
 		if (isset($this->request->get['page'])) {
 			$page = $this->request->get['page'];
@@ -428,6 +430,7 @@ class ControllerProductCategory extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
+			$data['print_icons'] = $this->load->controller('common/print_icons');
 
 			$data['categories'] = array();
 			$results = $this->model_catalog_category->getCategories();

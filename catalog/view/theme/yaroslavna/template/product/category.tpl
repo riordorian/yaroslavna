@@ -33,7 +33,7 @@ if( !empty($products) ){
             }
           ?>
 
-          <?if( $arProduct['PRICE'] ) {
+          <?if( $arProduct['PRICE'] && !empty($_REQUEST['PRICE']) && $_REQUEST['PRICE'] == 1 ) {
             ?><div class="col-md-6 col-sm-6 col-xs-6 price"><?
                 if (!empty($arProduct['OLD_PRICE'])) {
                     ?><strike><?=$arProduct['OLD_PRICE']?><span class="rub"></span></strike><br><?
@@ -62,6 +62,8 @@ if( !empty($products) ){
     <div class="pull-right"><a href="<?php echo $continue; ?>" class="btn btn-primary"><?php echo $button_continue; ?></a></div>
   </div>
 <?php } ?>
+
+<?=$print_icons?>
 
 <?if(!empty($categories)){
     ?><div class="container m-t-xlg">

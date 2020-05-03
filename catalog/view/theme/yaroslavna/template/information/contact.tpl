@@ -21,10 +21,11 @@
 
 <div class="article">
   <div class="col-md-4 article__img">
-    <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZHCi617" width="100%" height="250" frameborder="0"></iframe>
+    <iframe src="https://api-maps.yandex.ru/frame/v1/-/CZHCi617" width="100%" height="350" frameborder="0"></iframe>
   </div>
   <div class="col-md-8 article__text contacts__text">
-    <p>Наша мастерская находится в Ярославле, но мы осуществляем <a href="/delivery_payment">доставку</a> по всей России и СНГ.</p>
+    <p>Встречу и обсуждение икон можно провести в <b>Москве, Санкт-Петербурге, Ярославле.</b></p><br>
+    <p>Мастерская находится в Ярославле, но мы осуществляем <a href="/delivery_payment">доставку</a> по всей России и СНГ.</p>
     <p>Если вам нужна помощь в выборе иконы, то обращайтесь по следующей контактной информации:</p>
     <p><b>E-mail:</b>
       <a href="mailto:info@ikona-yaroslavna.ru">info@ikona-yaroslavna.ru</a>

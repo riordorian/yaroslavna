@@ -31,6 +31,7 @@
     <script src="catalog/view/javascript/jquery/jquery-2.1.1.min.js" type="text/javascript"></script>
 
     <!--СТИЛИ-->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/bootstrap.css">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/header.css">
     <link rel="stylesheet" href="catalog/view/theme/yaroslavna/stylesheet/main.css">
@@ -45,7 +46,6 @@
     <!--СТИЛИ КОНЕЦ-->
 
     <!--JS-->
-    <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/bootstrap-3.4.1.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/svg.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/slick/slick.min.js"></script>
     <script type="text/javascript" src="catalog/view/theme/yaroslavna/js/inputmask.js"></script>
@@ -86,7 +86,7 @@
                     <div class="col-md-4 text-right js-mgnf-wrap">
                         <a href="tel:+79106653117" class="header-top__phone">+7 (910) 665-31-17</a>
                         <p class="header-top__txt">Мы можем вам перезвонить</p>
-                        <a href="#call" class="btn btn--green header-top__btn js-mgnf">Заказать звонок</a>
+                        <a href="#call" class="btn btn--green header-top__btn js-mgnf">Позвонить мне</a>
                     </div>
                 </div>
             </div>

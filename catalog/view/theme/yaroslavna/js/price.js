@@ -26,8 +26,8 @@ function validate_gold(Obj)
 
 function calcsum(t_Oj)
 {
-    t_Oj.i_area.value = (( parseFloat(t_Oj.i_width.value) ) * parseFloat(t_Oj.i_height.value))/100;
-    cur_area = t_Oj.i_area.value;
+    cur_area = (parseFloat(t_Oj.i_width.value) * parseFloat(t_Oj.i_height.value))/100;
+    $(t_Oj).find('[name=i_area]').text(cur_area);
     switch (true) {
         case (cur_area<=0.95): price_dm=6349.21; break;
         case (cur_area<=1.6): price_dm=4687.50; break;
@@ -100,5 +100,9 @@ function calcsum(t_Oj)
 
 
     cur_price=(base_price*k)*k_inf;
-    t_Oj.i_summ.value = Math.round(cur_price);
+    $(t_Oj).find('.itog_inp span').text(number_format(Math.round(cur_price), 0, '', ' '));
 }
+
+$(function () {
+    yaCounter27298259.reachGoal('calc');
+})

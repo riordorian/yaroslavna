@@ -1,4 +1,5 @@
 <?php echo $header; ?>
+<script type="text/javascript" src="catalog/view/theme/yaroslavna/js/bootstrap-3.4.1.min.js"></script>
 
 <ul class="content__breadcrumbps"><?
   $breadcrumbpsCnt = count($breadcrumbs);
@@ -63,7 +64,7 @@
             <span class="property__text"><?=$width?>x<?=$height?> см</p>
             <input type="hidden" name="size" value="<?=$width?>x<?=$height?>"><?
         }
-        if( $price ){
+        if( $price && !empty($_REQUEST['PRICE']) && $_REQUEST['PRICE'] == 1 ){
             ?><p class="price">
                 <span class="property__name">Цена:</span><?
                 if (!empty($old_price)){
@@ -118,14 +119,21 @@
       <div class="clear"></div>
       <p class="status">&nbsp;</p>
       <div class="clear"></div>
+        <p>Нажимая на кнопку, вы даете <a target="_blank" href="/consent/">согласие на обработку своих персональных данных</a></p>
     </form>
   </div>
 
     <div class="clearfix"></div>
     <br>
     <div class="col-md-12 col-mt">
-        <h4>Данную икону можно заказать и в других размерах. Для уточнения деталей заказа вы можете связаться с нами по телефону.
-        <a href="tel:+79106653117">+7 (910) 665-31-17</a></h4>
+        <h4>Данную икону можно заказать и в других размерах.</h4>
+        <div>
+            <ul>
+                <li>Ориентировочную цену вы можете <b>рассчитать <a class="js-ajax-popup-link" href="/calc/">тут</a>.</b></li>
+                <li>Для уточнения деталей заказа вы можете <a href="tel:+79106653117"><b>связаться с нами по телефону
+                    +7 (910) 665-31-17</b></a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="clearfix"></div>
@@ -166,6 +174,14 @@
     </div>
     <div class="clearfix"></div>
 
+
+
+</div>
+<?=$print_icons?>
+
+
+<div class="container">
+    <div class="row">
     <?
     if (!empty($popular_products)) {
         ?><div class="content col-md-12 m-t-lg">

@@ -240,6 +240,9 @@
 .content .product-card .nav-tabs li a {
 	color: #555;
 }
+.content .product-card h5 {
+	line-height: 1.8;
+}
 
 /*СТАТЬИ*/
 .content .article{
@@ -318,6 +321,31 @@
 }
 
 
+/* Печатные иконы */
+.print-icons {
+	background: #224039;
+	background-image: url("/image/other/gold.jpg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 30px 0 40px;
+	color: white;
+	margin: 50px 0 30px;
+}
+.print-icons p {
+	font-size: 18px;
+}
+.print-icons a {
+	color: #ffffff;
+	text-decoration: underline;
+	opacity: .9;
+}
+.print-icons a:hover {
+	opacity: 1;
+}
+/* Печатные иконы */
+
+
+
 .text-style-title,
 .text-style-subtitle p{
 	background: rgba(0,0,0,.4);
@@ -381,3 +409,12 @@ form[name=Kalkulator] td{
 	height: 30px;
 	margin-bottom: 20px;
 }
+.itog_inp {
+	background-color: transparent;
+	font-size: 22px;
+	color: #299a66;
+	text-align: left;
+	font-weight: bold;
+	padding: 0;
+}
+

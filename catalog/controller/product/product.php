@@ -297,7 +297,7 @@ class ControllerProductProduct extends Controller {
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 			$data['width'] = (integer)$product_info['width'];
 			$data['height'] = (integer)$product_info['height'];
-
+			
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
@@ -544,6 +544,8 @@ class ControllerProductProduct extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
+			$data['print_icons'] = $this->load->controller('common/print_icons');
+
 
 			$this->response->setOutput($this->load->view('product/product', $data));
 		} else {

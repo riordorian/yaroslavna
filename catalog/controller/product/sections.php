@@ -27,6 +27,7 @@ class ControllerProductSections extends Controller {
 
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
+		$data['print_icons'] = $this->load->controller('common/print_icons');
 		$data['heading_title'] = $this->language->get('text_section_title');
 		$data['categories'] = array();
 
